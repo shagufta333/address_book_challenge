@@ -18,5 +18,9 @@
   },
   "dependencies": {
     "bdd-lazy-var": "^2.6.1"
+  },
+  "scripts": {
+    "start": "superstatic src",
+    "cy:open": "yarn start & cypress open"
   }
 }
