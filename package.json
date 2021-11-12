@@ -21,6 +21,8 @@
   },
   "scripts": {
     "start": "superstatic src",
-    "cy:open": "yarn start & cypress open"
+    "test": "mocha --file specs/specHelper.js -u bdd-lazy-var/global --recursive --exit specs/units",
+    "cy:open": "cypress open",
+    "cypress": "start-server-and-test start http://localhost:3474 cy:open"
   }
 }
