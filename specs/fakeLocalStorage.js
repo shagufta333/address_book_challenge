@@ -4,12 +4,21 @@ global.window={}
 global.window.localStorage={
 
     data(){},
-    getItem(){},
+    getItem(key){
+
+        return this.data[key]
+    },
     setItem(key, value){
         this.data[key] = value
 
 
     },
-    removeItem(){},
-    clear(){}
+    removeItem(key){
+
+        delete this.data[key]
+    },
+    clear(){
+
+        this.data={}
+    }
 }
