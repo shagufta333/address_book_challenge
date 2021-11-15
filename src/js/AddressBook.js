@@ -2,7 +2,11 @@
 
 class AddressBook{
 
-    index(){}
+    index(){
+
+        const entries = window.localStorage.getItem('entries');
+        return JSON.parse(entries);
+    }
     create(data){
 
         if (data.constructor === Object) {
@@ -13,6 +17,9 @@ class AddressBook{
           window.localStorage.setItem("entries", JSON.stringify(newEntries));
           return"The entry  was added to the address book";
             
+        }else{
+
+            return'we could not process your entry'
         }
     }
 }
