@@ -1,6 +1,6 @@
 //const { expect } = require("chai");
 
-const { expect } = require("chai");
+
 
 
 
@@ -84,7 +84,7 @@ describe('localStorage', () => {
 
     });
 
-    describe.only('#clear', () => {
+    describe('#clear', () => {
 
         beforeEach(() => {
             $subject.setItem("myKey", "some value");

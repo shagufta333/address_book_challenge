@@ -4,6 +4,7 @@ global.window={}
 global.window.localStorage={
 
     data(){},
+    
     getItem(key){
 
         return this.data[key]
